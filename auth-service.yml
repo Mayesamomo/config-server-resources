@@ -1,7 +1,7 @@
 spring:
     data:
         mongodb:
-            uri: mongodb://localhost:27017/property-service
+            uri: mongodb://localhost:27017/auth-service
 server:
   servlet:
     context-path: /uaa

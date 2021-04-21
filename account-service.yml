@@ -8,13 +8,9 @@ security:
       scope: server
 
 spring:
-  data:
-    mongodb:
-      host: account-mongodb
-      username: user
-      password: ${MONGODB_PASSWORD}
-      database: rentoshare
-      port: 27017
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/property-service
 
 server:
   servlet:

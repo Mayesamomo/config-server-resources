@@ -3,7 +3,7 @@ logging:
     org.springframework.security: INFO
 
 hystrix:
-  command:s
+  command:
     default:
       execution:
         isolation:
@@ -14,6 +14,8 @@ eureka:
   instance:
     prefer-ip-address: true
   client:
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
 
@@ -22,6 +24,6 @@ security:
     resource:
       user-info-uri: http://auth-service:5000/uaa/users/current
 
-#spring:
-#  rabbitmq:
-#    host: rabbitmq
+spring:
+  rabbitmq:
+    host: rabbitmq
